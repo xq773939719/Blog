@@ -222,12 +222,12 @@ postCalendar: true
 # the Gitalk config，default disabled
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
-  enable: false
+  enable: true
   owner: xq773939719
   repo: Gitalk
   oauth:
-    clientId: d921305eed5f6e5f3de6
-    clientSecret: 90667fb6de45a1aa3cba12a953d294eeaeeb38ba
+    clientId: 2f282cb0cd23bdb30ee2
+    clientSecret: ef8013a1cc0e192836587f527641b025a449ffb2
   admin: xq773939719
   perPage: 15 #每页多少个评论
   pagerDirection: last #排序方式是从旧到新（first）还是从新到旧（last）
@@ -262,7 +262,7 @@ disqus:
 # Livere comment configuration, the default is not activated
 # Livere 来必力评论模块的配置，默认为不激活
 livere:
-  enable: true
+  enable: false
   uid: MTAyMC80MTEwMy8xNzYyOA==
 
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
