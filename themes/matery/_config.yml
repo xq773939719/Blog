@@ -222,7 +222,7 @@ postCalendar: true
 # the Gitalk config，default disabled
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
-  enable: true
+  enable: false
   owner: xq773939719
   repo: Gitalk
   oauth:
@@ -256,7 +256,7 @@ gitment:
 # disqus config, default disabled
 # Disqus评论模块的配置，默认为不激活
 disqus:
-  enable: false
+  enable: true
   shortname: xq773939719
 
 # Livere comment configuration, the default is not activated
