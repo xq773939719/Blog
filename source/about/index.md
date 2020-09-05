@@ -3,6 +3,8 @@ title: 关于
 date: 2018-10-31 00:45:54
 type: "about"
 layout: "about"
+copyright: true
+comments: true
 ---
 
 ## 1.自我介绍
