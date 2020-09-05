@@ -17,7 +17,8 @@ url: https://blog.4live.host/
 root: /
 permalink: category/:title/ ##:year/:month/:day/:title/
 permalink_defaults:
-
+pretty_urls:
+  trailing_index: false
 # Directory
 source_dir: source
 public_dir: public
@@ -84,7 +85,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 #theme: mynext
-theme: matery
+theme: archer
 
 
 # Deployment
@@ -173,3 +174,22 @@ prism_plugin:
 #https://www.jianshu.com/p/d23d67d318c7
 #https://blog.csdn.net/heqiangflytosky/article/details/54863166
 #https://blog.csdn.net/u010053344/article/details/50706790
+
+jsonContent:
+  meta: true
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: true
+    excerpt: false
+    categories: true
+    tags: true
