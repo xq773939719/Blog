@@ -14,7 +14,7 @@ keywords: iOS面试问题
 description: 
 passwords:
 img:
-abstract:
+abstract: 对面试问题进行一个简单汇总
 ---
 
 

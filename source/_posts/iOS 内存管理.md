@@ -44,4 +44,8 @@ weak -> __weak
 
 # 3.weak原理
 TODO
+
+
+# 参考
+[深入研究 Block 用 weakSelf、strongSelf、@weakify、@strongify 解决循环引用](https://halfrost.com/ios_block_retain_circle/)
 [iOS底层原理：weak的实现原理](https://juejin.im/post/6844904101839372295#heading-0)
