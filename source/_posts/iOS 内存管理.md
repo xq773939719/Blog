@@ -41,3 +41,7 @@ assign unsafe_unretained -> __unsafe_unretained
 copy retain strong -> __strong
 
 weak -> __weak
+
+# 3.weak原理
+TODO
+[iOS底层原理：weak的实现原理](https://juejin.im/post/6844904101839372295#heading-0)
