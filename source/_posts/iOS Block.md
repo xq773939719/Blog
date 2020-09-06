@@ -14,7 +14,7 @@ keywords: Block
 description: 
 passwords:
 img:
- : Block 本质是结构体对象，通过生成指定结构体实现变量捕获与函数调用
+abstract: Block 本质是结构体对象，通过生成指定结构体实现变量捕获与函数调用
 ---
 Block是C语言的扩充，是带有自动变量的匿名函数。类似于指针函数。
 
