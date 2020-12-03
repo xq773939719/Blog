@@ -94,7 +94,7 @@ theme: archer
 deploy:
   type: git
   repo:
-    github: git@github.com:xq773939719/xq773939719.github.io.git,master
+    github: git@github.com:xq773939719/Blog.git,master
     # gitee: git@gitee.com:xq773939719/xq773939719.git,master
     # bitbucket: git@bitbucket.org:xq773939719/xq773939719.bitbucket.io.git,master
 
