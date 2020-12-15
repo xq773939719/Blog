@@ -1,0 +1,262 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>计算机网络浅谈 | 晴风的博客</title><meta name="keywords" content="计算机网络"><meta name="author" content="XQ"><meta name="copyright" content="XQ"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="1. HTTP HTTPS什么是HTTP HTTPS？Hyper Text Transfer Protocal 超文本传输协议，是实现数据通信的基石 HTTP协议用于客户端和服务端之间的通信，通过请求和响应的交互达成通信（肯定是先从客户端开始建立通信的，服务器端在没有接收到任何请求之前不会发送响应） HTTP是无状态的协议，为了实现期望的保存状态的功能，引入了Cookie技术 请求服务器的方法 p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络浅谈">
+<meta property="og:url" content="https://blog.xq99.org/posts/4.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%B5%85%E8%B0%88/">
+<meta property="og:site_name" content="晴风的博客">
+<meta property="og:description" content="1. HTTP HTTPS什么是HTTP HTTPS？Hyper Text Transfer Protocal 超文本传输协议，是实现数据通信的基石 HTTP协议用于客户端和服务端之间的通信，通过请求和响应的交互达成通信（肯定是先从客户端开始建立通信的，服务器端在没有接收到任何请求之前不会发送响应） HTTP是无状态的协议，为了实现期望的保存状态的功能，引入了Cookie技术 请求服务器的方法 p">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2020-12-03T06:24:24.000Z">
+<meta property="article:modified_time" content="2020-12-03T06:24:27.000Z">
+<meta property="article:author" content="XQ">
+<meta property="article:tag" content="网络">
+<meta property="article:tag" content="HTTP">
+<meta property="article:tag" content="HTTPS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.xq99.org/posts/4.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%B5%85%E8%B0%88/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-12-03 14:24:27'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="晴风的博客" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">晴风的博客</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计算机网络浅谈</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-03T06:24:24.000Z" title="发表于 2020-12-03 14:24:24">2020-12-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-03T06:24:27.000Z" title="更新于 2020-12-03 14:24:27">2020-12-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="1-HTTP-HTTPS"><a href="#1-HTTP-HTTPS" class="headerlink" title="1. HTTP HTTPS"></a>1. HTTP HTTPS</h1><h3 id="什么是HTTP-HTTPS？"><a href="#什么是HTTP-HTTPS？" class="headerlink" title="什么是HTTP HTTPS？"></a>什么是HTTP HTTPS？</h3><p>Hyper Text Transfer Protocal 超文本传输协议，是实现数据通信的基石</p>
+<p>HTTP协议用于客户端和服务端之间的通信，通过请求和响应的交互达成通信（肯定是先从客户端开始建立通信的，服务器端在没有接收到任何请求之前不会发送响应）</p>
+<p>HTTP是无状态的协议，为了实现期望的保存状态的功能，引入了Cookie技术</p>
+<p>请求服务器的方法 <code>post get put head delete options trace connect</code></p>
+<pre class=" language-markdown"><code class="language-markdown">GET 请求资源，服务器解析后返回数据，数据在URL可见，直接传输不安全，记得转码
+POST 传输实体数据，安全，数据在请求体里面
+× PUT 传输文件，鉴于HTTP／1.1的PUT方法自身不带验证机制，任何人都可以上传文件，存在安全性问题，因此一般的网站不建议使用该方法。若配合Web应用程序的验证机制，或架构设计采用REST标准的同类Web网站，就可能会开放使用PUT方法。
+HEAD 同GET类似，只是为了获得报文首部，用于确认URL有效性以及更新日期
+× DELETE 和PUT一样不带验证
+OPTIONS 查询针对请求URL指定的资源支持的方法
+TRACE 追踪路径，客户端通过TRACE方法可以查询发送出去的请求是怎样被加工修改／篡改的。这是因为，想要连接到源目标服务器可能会通过代理中转，TRACE方法就是用来确认连接过程中发生的一系列操作。
+CONNECT  要求用隧道协议连接代理。CONNECT方法在与代理服务器通信时建立隧道，实现用隧道协议进行TCP通信。主要使用SSL和TLS协议把通信内容经网络隧道传输。</code></pre>
+<p>无连接 无状态如何解决？</p>
+<p>keep-alive 只要任意一端没有提出断开连接，则保持TCP连接。管线化，持久连接促进管线化，不必等待下一次请求，就可以发送多个响应。</p>
+<p>cookie 通过在请求和响应报文中写入cookie信息来控制客户端状态。</p>
+<p>返回结果的HTTP状态码</p>
+<ul>
+<li>1XX 表示服务器已经接收了客户端请求，客户端可继续发送请求</li>
+<li>2XX 请求正常处理完毕</li>
+<li>3XX 需要进行附加操作以完成请求</li>
+<li>4XX 表示客户端的请求有非法内容</li>
+<li>5XX 服务器处理请求出错</li>
+</ul>
+<p>通信数据转发程序：代理、网关、隧道</p>
+<p>使用代理服务器的理由：利用缓存技术减少网络带宽的流量。代理有多种使用方法，按两种基准分类。一类是 <strong>是否使用缓存</strong> ，另一种是 <strong>是否会修改报文</strong>。</p>
+<p>利用网关可以由HTTP请求转化为其他协议通信。</p>
+<p>利用缓存可减少对源服务器的访问，可以节省通信流量和通信时间。<br>使用缓存的时候，要注意缓存的有效期限，确保我们发起请求获取的是最新的数据资源。</p>
+<blockquote>
+<p>HTTP 有以下不足：</p>
+<ul>
+<li>通信使用明文（不加密），内容可能会被窃听</li>
+<li>不验证通信方的身份，因此有可能遭遇伪装</li>
+<li>无法证明报文的完整性，所以有可能已遭篡改</li>
+</ul>
+<p>HTTP + 加密 + 认证 + 完整性 = HTTPS</p>
+<p>HTTPS并非是应用层的一种新协议。只是HTTP通信接口部分用SSL和TSL协议代替而已，通常，HTTP直接和TCP通信，当使用SSL时，则演变成先和SSL通信，再由SSL和TCP通信了。简言之，所谓HTTPS其实就是身披SSL协议这层外壳的HTTP。</p>
+<p>当采用SSL后，HTTP就拥有了HTTPS的加密、证书和完整性保护这些功能。而且SSL协议是独立于HTTP的协议，所以不光是HTTP协议，其他运行在应用层的SMTP和Telnet等协议均可配合SSL协议使用。可以说SSL是当今世界上应用最为广泛的网络安全技术。</p>
+<p>在讲解SSL之前我们需要首先了解一下加密方法，加密分为对称加密和非对称加密。HTTPS协议则是采用的两者混合的实现方式，为什么要结合两种的实现方式呢？这是因为它们都各自存在自己的优缺点。对于对称加密来说，密钥的传输交换是不安全的，但是效率比较高，而对于非对称加密，是不用担心传输的密钥安全性的问题的，因为我们传递的是公开密钥，任何人都可以获得，但是缺点是效率比较低。对于公钥私钥、数字签名，这个哥们已经总结的相当好了，可以参考一下这篇<a target="_blank" rel="noopener" href="http://www.cnblogs.com/f1194361820/archive/2015/01/29/4260025.html">文章</a>。</p>
+</blockquote>
+<h3 id="为什么需要加密"><a href="#为什么需要加密" class="headerlink" title="为什么需要加密"></a>为什么需要加密</h3><p>http内容是明文传输的，明文数据经过中间代理服务器、路由，如果信息在传输过程中被劫持，内容将会是完全暴露的，甚至可以篡改，这称为中间人攻击。</p>
+<h3 id="对称加密"><a href="#对称加密" class="headerlink" title="对称加密"></a>对称加密</h3><p>一段密钥代码，它可以解密原本的内容。</p>
+<p>获取信息的一方持有这个密钥才能和解密获得信息。</p>
+<h3 id="只有对称加密可行吗"><a href="#只有对称加密可行吗" class="headerlink" title="只有对称加密可行吗"></a>只有对称加密可行吗</h3><p>如果通信双方本来就持有密钥，安全性没问题，密钥怎么来的，肯定是浏览器发出请求，服务器响应，告诉双方“你用这个密钥解密”，这样就完全把密钥暴露在外，还是不安全的。</p>
+<h3 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h3><p>公钥内容用私钥解，私钥内容用公钥解，耗时</p>
+<h3 id="非对称与对称结合"><a href="#非对称与对称结合" class="headerlink" title="非对称与对称结合"></a>非对称与对称结合</h3><p>首先，服务器持有公钥A，私钥A，明文传送公钥A传送到客户端，客户端网站生成密钥a，使用服务器的公钥A加密密钥a发送报文到服务端，服务端接受报文并使用密钥A解密得到密钥a，这样的密钥a看似是安全的，双方可以使用密钥a加密解密。但是，如果明文传送的公钥A被中间人获取，并生成密钥α，使用公钥A加密α发送报文，这样双方都获得了α，使用α加密解密，中间人就使用α密钥攻击服务器了。</p>
+<p>发生这种情况的原因是服务器收到返回的加密后的密钥a/α，它不知道是不是自己网站产生的密钥。</p>
+<p>如何证明是客户端发送请求并且是客户端收到公钥并且是客户端生成密钥a使用公钥A加密后返回的？</p>
+<ul>
+<li><p>公信机构，提供证明，例如数字证书，服务器发送网站HTTPS信息前需要申请数字证书，证书存有持有者、持有者公钥、证书对应网址等信息，传数字证书给浏览器，标记此证书对应此网站，浏览器从证书取公钥就好了，不用明文传送公钥。</p>
+</li>
+<li><p>那证书万一被篡改呢？给证书加个防伪标志，数字签名：使用证书内容生成一份签名，比对证书内容和签名是否一致。</p>
+</li>
+<li><p>CA数字签名制作（因为公信机构CA拥有服务端公钥私钥，CA对证书明文信息hash，hash使用私钥加密，得到数字签名）。</p>
+</li>
+<li><p>证书明文和数字签名共同组成数字证书。颁发给网站。</p>
+</li>
+<li><p>那浏览器如何验证是不是此网站的证书？浏览器使用CA机构的公钥解密签名，并通过证书明文计算签名，对比是否相等，相等则验证成功。</p>
+</li>
+</ul>
+<p>具体过程如下：获取颁发证书，校验证书是否是CA颁发，服务器响应请求</p>
+<pre><code>
+                          CA机构→→2→→→证书明文与证书哈希后私钥加密
+                            ↑                   ↓
+                            ↑     (服务器有CA私钥)   ↓
+                            1           (取证书)        3
+(浏览器校验证书是否被替换)    某网站                                  ↓
+浏览器→→→→→HTTPS请求→→→→→→→→服务器←←←←←←4←←←←←←←带签名的证书
+(证书)←←←←←←←←←签名证书←←←←←← ↓ ↑
+  →用证书公钥加密客户端密钥→→→→ ↓ ↑ 使用私钥解密客户端密钥存储sessionID
+ （建立了安全的连接）          5  6   
+ 每次使用客户端密钥加密发送信息← ↓ ↑                     (校验)
+ →每次使用服务端公钥加密发送信息 ↓ ↑    
+                            验证
+                               → &#123;用证书的公钥解密签名得到明文的哈希值&#125;
+                               → &#123;使用哈希函数处理证书明文得到哈希值&#125;
+                               → &#123;对比哈希值&#125;
+                               → 如果相等，安全，没有被篡改
+                               → 如果不等，证书被篡改
+       (请求与响应)
+
+</code></pre>
+<p>加密解密的过程在分层网络模型中处于TCP之上的SSL/TSL层</p>
+<h1 id="2-常见的字段是什么？"><a href="#2-常见的字段是什么？" class="headerlink" title="2. 常见的字段是什么？"></a>2. 常见的字段是什么？</h1><p>Host x.x.x 请求地址<br>content-length 响应数据长度<br>content-type 响应数据格式<br>content-encoding 数据压缩格式<br>connection 用于保持长连接<br>accept 声明接受的数据格式<br>accept-encoding 可接受的压缩格式</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/43789231">彻底搞懂HTTPS的加密机制</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.akathink.com/2016/07/28/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82HTTP%E5%8D%8F%E8%AE%AE/">彻底搞懂HTTP协议</a></p>
+<p><a target="_blank" rel="noopener" href="https://liyucang-git.github.io/2019/01/02/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82HTTP%E5%92%8CHTTPS%E5%8D%8F%E8%AE%AE/">彻底搞懂HTTP和HTTPS协议</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chenqf/p/6386163.html">彻底弄懂HTTP缓存机制及原理</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/f1194361820/p/4260025.html">Java Security：公钥私钥、数字签名、消息摘要是什么</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/53329356">ssl/tls是什么？是怎么工作的？</a></p>
+<h1 id="2-XSS-CSRF"><a href="#2-XSS-CSRF" class="headerlink" title="2. XSS CSRF"></a>2. XSS CSRF</h1><p>xss：用户过分信任网站，放任来自浏览器地址栏代表的那个网站代码在自己本地任意执行。如果没有浏览器的安全机制限制，xss代码可以在用户浏览器为所欲为；</p>
+<p>csrf：网站过分信任用户，放任来自所谓通过访问控制机制的代表合法用户的请求执行网站的某个特定功能。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">XQ</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.xq99.org/posts/4.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%B5%85%E8%B0%88/">https://blog.xq99.org/posts/4.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%B5%85%E8%B0%88/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.xq99.org" target="_blank">晴风的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C/">网络</a><a class="post-meta__tags" href="/tags/HTTP/">HTTP</a><a class="post-meta__tags" href="/tags/HTTPS/">HTTPS</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/5.Git%E5%91%BD%E4%BB%A4/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Git命令</div></div></a></div><div class="next-post pull-right"><a href="/posts/3.%E8%87%AA%E6%88%91%E9%A9%B1%E5%8A%A8/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">自我驱动</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a target="_blank" rel="noopener" href="//posts/5.Git命令/" title="Git命令"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-03</div><div class="title">Git命令</div></div></a></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">XQ</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-HTTP-HTTPS"><span class="toc-number">1.</span> <span class="toc-text">1. HTTP HTTPS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFHTTP-HTTPS%EF%BC%9F"><span class="toc-number">1.0.1.</span> <span class="toc-text">什么是HTTP HTTPS？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%8A%A0%E5%AF%86"><span class="toc-number">1.0.2.</span> <span class="toc-text">为什么需要加密</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86"><span class="toc-number">1.0.3.</span> <span class="toc-text">对称加密</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AA%E6%9C%89%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E5%8F%AF%E8%A1%8C%E5%90%97"><span class="toc-number">1.0.4.</span> <span class="toc-text">只有对称加密可行吗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86"><span class="toc-number">1.0.5.</span> <span class="toc-text">非对称加密</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E5%AF%B9%E7%A7%B0%E4%B8%8E%E5%AF%B9%E7%A7%B0%E7%BB%93%E5%90%88"><span class="toc-number">1.0.6.</span> <span class="toc-text">非对称与对称结合</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%B8%B8%E8%A7%81%E7%9A%84%E5%AD%97%E6%AE%B5%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">2. 常见的字段是什么？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">3.</span> <span class="toc-text">参考</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-XSS-CSRF"><span class="toc-number">4.</span> <span class="toc-text">2. XSS CSRF</span></a></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/18.%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6/" title="阅读进度"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="阅读进度"/></a><div class="content"><a class="title" href="/posts/18.%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6/" title="阅读进度">阅读进度</a><time datetime="2020-12-03T08:08:59.000Z" title="发表于 2020-12-03 16:08:59">2020-12-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/16.%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/" title="移动端学习网站"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="移动端学习网站"/></a><div class="content"><a class="title" href="/posts/16.%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/" title="移动端学习网站">移动端学习网站</a><time datetime="2020-12-03T07:11:13.000Z" title="发表于 2020-12-03 15:11:13">2020-12-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/17.OpenGL%E5%AD%A6%E4%B9%A0/" title="OpenGL学习"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OpenGL学习"/></a><div class="content"><a class="title" href="/posts/17.OpenGL%E5%AD%A6%E4%B9%A0/" title="OpenGL学习">OpenGL学习</a><time datetime="2020-12-03T07:11:13.000Z" title="发表于 2020-12-03 15:11:13">2020-12-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/15.%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/" title="项目学习网站"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="项目学习网站"/></a><div class="content"><a class="title" href="/posts/15.%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/" title="项目学习网站">项目学习网站</a><time datetime="2020-12-03T07:09:56.000Z" title="发表于 2020-12-03 15:09:56">2020-12-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/13.%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/" title="前端学习网站"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端学习网站"/></a><div class="content"><a class="title" href="/posts/13.%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/" title="前端学习网站">前端学习网站</a><time datetime="2020-12-03T07:04:25.000Z" title="发表于 2020-12-03 15:04:25">2020-12-03</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By XQ</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
