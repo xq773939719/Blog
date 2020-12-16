@@ -63,7 +63,7 @@ default_category: uncategorized
 category_map:
 tag_map:
 
-# Extensions 扩展
+# Extensions 扩展asset_inject
 ## Plugins: https://hexo.io/plugins/ #插件
 plugins:
   hexo-generator-feed #RSS订阅插件
