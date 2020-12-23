@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>阅读进度</title>
-      <link href="/posts/18.%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6/"/>
-      <url>/posts/18.%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 阅读 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>移动端学习网站</title>
       <link href="/posts/16.%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/"/>
       <url>/posts/16.%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/</url>
@@ -42,37 +17,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> 移动端 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>OpenGL学习</title>
-      <link href="/posts/17.OpenGL%E5%AD%A6%E4%B9%A0/"/>
-      <url>/posts/17.OpenGL%E5%AD%A6%E4%B9%A0/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="1-入门"><a href="#1-入门" class="headerlink" title="1.入门"></a>1.入门</h1><p>transformation 变换<br>projection 投影<br>vertices 顶点</p><p>shader 着色器<br>texture 纹理<br>blending 混合</p><h1 id="2-步骤"><a href="#2-步骤" class="headerlink" title="2.步骤"></a>2.步骤</h1><p>剪裁 -&gt; 投影 -&gt; 光栅化</p><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://learnopengl-cn.github.io/">LearnOpenGL</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> OpenGL </tag>
-            
-        </tags>
       
     </entry>
     
@@ -93,12 +37,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> 项目 </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -117,12 +55,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> 前端 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -143,12 +75,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> 算法 </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -167,12 +93,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> 后端 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -193,12 +113,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> 源管理 </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -217,12 +131,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> Android </tag>
-            
-        </tags>
       
     </entry>
     
@@ -243,12 +151,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> iOS </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -267,14 +169,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> C++ </tag>
-            
-            <tag> 对象 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -295,12 +189,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> 收藏夹 </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -319,16 +207,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> C++ </tag>
-            
-            <tag> 数据结构 </tag>
-            
-            <tag> 红黑树 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -349,16 +227,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> 网络 </tag>
-            
-            <tag> HTTP </tag>
-            
-            <tag> HTTPS </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -377,16 +245,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> 网络 </tag>
-            
-            <tag> HTTP </tag>
-            
-            <tag> HTTPS </tag>
-            
-        </tags>
       
     </entry>
     
@@ -407,12 +265,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> 软实力 </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -432,12 +284,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> 通用 </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -456,12 +302,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> C++ </tag>
-            
-        </tags>
       
     </entry>
     
