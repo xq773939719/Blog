@@ -10,11 +10,16 @@ menu:
   主页: / || fas fa-home
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  阅读||fas fa-list:
-     - 《高效程序员的45个习惯》 || /other/高效程序员的45个习惯 || fas fa-book
+  阅读 || fas fa-list:
+     - 《高效程序员的45个习惯》 || /page/book/高效程序员的45个习惯 || fas fa-book
   # 友链: /link/ || fas fa-link
-  日记|| fas fa-list:
-    - 2020年12月 || /diary/202012 || fas fa-book
+  日记 || fas fa-list:
+    - 2020年12月 || /page/diary/202012 || fas fa-book
+  算法 || fas fa-list:
+    - 简单 || /page/leetcode/easy || fas fa-battery-quarter
+    - 中等 || /page/leetcode/medium || fas fa-battery-half
+    - 困难 || /page/leetcode/hard || fas fa-battery-three-quarters
+    - 精选 || /page/leetcode/star || fas fa-battery-full
   时间轴: /archives/ || fas fa-archive
   关于: /about/ || fas fa-heart
 
