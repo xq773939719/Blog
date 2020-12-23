@@ -27,6 +27,7 @@ highlight_shrink:
 ## 第一章 敏捷 - 高效软件开发之道
 
 - 开发要持续不断，切勿时续时断。`Continuous development, not episodic.`
+
 > 先难后易。我们首先要解决困难的问题，把简单的问题留到最后。
 
 ## 第二章 态度决定一切
