@@ -6,7 +6,7 @@
   <link href="https://blog.xq99.org/atom.xml" rel="self"/>
   
   <link href="https://blog.xq99.org/"/>
-  <updated>2020-12-03T08:09:05.000Z</updated>
+  <updated>2020-12-15T18:31:01.588Z</updated>
   <id>https://blog.xq99.org/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>阅读进度</title>
-    <link href="https://blog.xq99.org/posts/18.%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6/"/>
-    <id>https://blog.xq99.org/posts/18.%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6/</id>
-    <published>2020-12-03T08:08:59.000Z</published>
-    <updated>2020-12-03T08:09:05.000Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="阅读" scheme="https://blog.xq99.org/tags/%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
   
   <entry>
     <title>移动端学习网站</title>
@@ -55,30 +33,6 @@
     
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    
-    <category term="移动端" scheme="https://blog.xq99.org/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OpenGL学习</title>
-    <link href="https://blog.xq99.org/posts/17.OpenGL%E5%AD%A6%E4%B9%A0/"/>
-    <id>https://blog.xq99.org/posts/17.OpenGL%E5%AD%A6%E4%B9%A0/</id>
-    <published>2020-12-03T07:11:13.000Z</published>
-    <updated>2020-12-03T07:11:15.000Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="OpenGL" scheme="https://blog.xq99.org/tags/OpenGL/"/>
     
   </entry>
   
@@ -100,8 +54,6 @@
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="项目" scheme="https://blog.xq99.org/tags/%E9%A1%B9%E7%9B%AE/"/>
-    
   </entry>
   
   <entry>
@@ -121,8 +73,6 @@
     
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    
-    <category term="前端" scheme="https://blog.xq99.org/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -144,8 +94,6 @@
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="算法" scheme="https://blog.xq99.org/tags/%E7%AE%97%E6%B3%95/"/>
-    
   </entry>
   
   <entry>
@@ -165,8 +113,6 @@
     
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    
-    <category term="后端" scheme="https://blog.xq99.org/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -188,8 +134,6 @@
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="源管理" scheme="https://blog.xq99.org/tags/%E6%BA%90%E7%AE%A1%E7%90%86/"/>
-    
   </entry>
   
   <entry>
@@ -209,8 +153,6 @@
     
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    
-    <category term="Android" scheme="https://blog.xq99.org/tags/Android/"/>
     
   </entry>
   
@@ -232,8 +174,6 @@
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="iOS" scheme="https://blog.xq99.org/tags/iOS/"/>
-    
   </entry>
   
   <entry>
@@ -253,10 +193,6 @@
     
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    
-    <category term="C++" scheme="https://blog.xq99.org/tags/C/"/>
-    
-    <category term="对象" scheme="https://blog.xq99.org/tags/%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
@@ -278,8 +214,6 @@
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="收藏夹" scheme="https://blog.xq99.org/tags/%E6%94%B6%E8%97%8F%E5%A4%B9/"/>
-    
   </entry>
   
   <entry>
@@ -299,12 +233,6 @@
     
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    
-    <category term="C++" scheme="https://blog.xq99.org/tags/C/"/>
-    
-    <category term="数据结构" scheme="https://blog.xq99.org/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="红黑树" scheme="https://blog.xq99.org/tags/%E7%BA%A2%E9%BB%91%E6%A0%91/"/>
     
   </entry>
   
@@ -326,12 +254,6 @@
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="网络" scheme="https://blog.xq99.org/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="HTTP" scheme="https://blog.xq99.org/tags/HTTP/"/>
-    
-    <category term="HTTPS" scheme="https://blog.xq99.org/tags/HTTPS/"/>
-    
   </entry>
   
   <entry>
@@ -351,12 +273,6 @@
     
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    
-    <category term="网络" scheme="https://blog.xq99.org/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="HTTP" scheme="https://blog.xq99.org/tags/HTTP/"/>
-    
-    <category term="HTTPS" scheme="https://blog.xq99.org/tags/HTTPS/"/>
     
   </entry>
   
@@ -378,8 +294,6 @@
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="软实力" scheme="https://blog.xq99.org/tags/%E8%BD%AF%E5%AE%9E%E5%8A%9B/"/>
-    
   </entry>
   
   <entry>
@@ -400,8 +314,6 @@
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="通用" scheme="https://blog.xq99.org/tags/%E9%80%9A%E7%94%A8/"/>
-    
   </entry>
   
   <entry>
@@ -421,8 +333,6 @@
     
     <category term="技术" scheme="https://blog.xq99.org/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    
-    <category term="C++" scheme="https://blog.xq99.org/tags/C/"/>
     
   </entry>
   
