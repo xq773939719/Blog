@@ -93,11 +93,11 @@ theme: cactus
 deploy:
   type: git
   repo:
-    # github: git@github.com:xq773939719/matery.git,master
+    github: git@github.com:xq773939719/Blog.git,master
     # gitee: git@gitee.com:xq773939719/xq773939719.git,master
     # bitbucket: git@bitbucket.org:xq773939719/xq773939719.bitbucket.io.git,master
 
-    coding: git@e.coding.net:xq773939719/xq773939719.coding.me/Blog.git,master
+    # coding: git@e.coding.net:xq773939719/xq773939719.coding.me/Blog.git,master
     # gitlab: git@gitlab.com:xq773939719/xq773939719.gitlab.io.git,master
 
 
