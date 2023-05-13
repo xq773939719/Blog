@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>晴风的博客</title>
+  
+  <subtitle>晴风</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.xq99.org/"/>
+  <updated>2023-05-13T15:31:04.000Z</updated>
+  <id>https://blog.xq99.org/</id>
+  
+  <author>
+    <name>XQ</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>这是一个文章模板</title>
+    <link href="https://blog.xq99.org/posts/template/"/>
+    <id>https://blog.xq99.org/posts/template/</id>
+    <published>2023-05-13T15:30:58.000Z</published>
+    <updated>2023-05-13T15:31:04.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
